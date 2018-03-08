@@ -1,0 +1,15 @@
+
+使用说明：两种方法效果一样
+
+方法一：
+
+	1.将当前目录下的应用display_time放置在AI10006q设备/bin目录下
+
+	2.在AI10006Q设备/etc/irisking_conf文件中添加 ：display_time 
+
+	3.重启设备生效
+
+方法二：
+
+	在在AI10006Q设备/etc/irisking_conf文件中添加：setterm --blank 0
+

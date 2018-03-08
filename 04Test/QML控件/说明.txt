@@ -1,0 +1,6 @@
+IKDate是日期选择控件
+IKTime是时间选择控件
+MessageBox是自定义的弹窗消息控件
+
+IKSysCap是系统容量
+qml目录是系统容量需要的

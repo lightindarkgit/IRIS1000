@@ -1,0 +1,31 @@
+$ tar zxcf libopenssh.tar.bz2 -C /
+$ cd /usr/local/etc/
+$ ssh-keygen -t rsa -f ssh_host_rsa_key -N ""
+$ ssh-keygen -t dsa -f ssh_host_dsa_key -N ""
+$ ssh-keygen -t ecdsa -f ssh_host_ecdsa_key -N ""
+$ ssh-keygen -t dsa -f ssh_host_ed25519_key -N ""
+
+$ chown -R root:root /var/empty/
+修改增加sshd
+$ vi /etc/passwd
+最后加一行：
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+$ /usr/local/bin/sshd
+
+以上是可以登陆，但是需要密码（ssh root@192.168.1.50）
+
+下面是没有密码登陆：
+
+$ cd ~
+$ ssh-keygen -t rsa -P ''              (敲一下回车)
+$ scp .ssh/id_rsa.pub root@192.168.1.50:/home
+
+
+$ cat id_rsa.pub >> ~/.ssh/authorized_keys  ( 另一台机器IP是192.168.1.50)
+$ chmod 600 ~/.ssh/authorized_keys            ( 另一台机器IP是192.168.1.50)
+
+最后再用原来的机器登陆192.168.1.50（ssh root@192.168.1.50）
+
+tar -xf libopenssh.tar.bz2 -C /
+
+

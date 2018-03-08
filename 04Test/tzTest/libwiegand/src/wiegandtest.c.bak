@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc,char*argv[])
+{
+	char temp[] = "hello,abc!";
+	int fd;
+        if((fd = open("/dev/wiegand_output",O_RDONLY|O_CREAT|O_WRONLY,0640)) == -1)
+		{
+		printf("creat file wrong!");
+		return 0;
+	}
+	char wiegand[26] = {0};
+	int len = strlen(argv[1]);
+	printf("argv1 strlen ==%d\n",len);
+	int hid = 0;
+	int pid = 0;
+	int i = 0;
+	while(len){
+	//	int i =0;
+		int tmp = argv[1][len-1] - 0x30;
+		printf("tmp = %d\n",tmp);
+		for(i = 0;i < (strlen(argv[1])-len);i++)
+		{
+		    tmp *= 10;
+		}
+	    hid +=tmp;
+		len--;
+	}
+	printf("hid = %d\n",hid);
+	len = strlen(argv[2]);
+	printf("argv2 strlen == %d\n",len);
+	while(len){
+	//	int = 0;
+	    int tmp = argv[2][len-1] - 0x30;
+		printf("tmp = %d\n",tmp);
+		for(i = 0;i< (strlen(argv[2]) - len);i++){
+		    tmp *= 10;
+		}
+		pid += tmp;
+		len--;
+	}
+	printf("pid = %d\n",pid);
+	for(i = 0;i < 8;i++){
+	    if(hid%2 == 0){
+		    wiegand[8-i] = '0';
+		}
+		else
+			wiegand[8-i] = '1';
+        hid /= 2;
+	}
+	for(i = 0;i < 16;i++){
+		if(pid%2 ==0)
+			wiegand[24-i] = '0';
+		else
+			wiegand[24-i] = '1';
+		pid /= 2;
+	}
+    int odd = 0;//及校验
+	int enev =0;//偶校验
+	for(i = 0;i < 12;i++){
+	    if(wiegand[i+1] == '1')
+			enev++;
+		if(wiegand[i+1+12] == '1')
+			odd++;
+	}
+	if(enev%2 == 0){
+	    wiegand[0] = '0';
+	}
+	else
+		wiegand[0] = '1';
+	if(odd%2 == 0){
+	    wiegand[25] = '1';
+	}
+	else
+		wiegand[25] = '0';
+//	char string[30] = {"00000111110011100101100110"};
+	int size = write(fd,wiegand,26);
+	printf("%s \n",wiegand);
+//	printf("size = %d\n",size);	
+	close(fd);
+	return 0;
+}

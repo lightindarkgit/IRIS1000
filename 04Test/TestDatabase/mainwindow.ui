@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="LB_RGB">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>480</width>
+      <height>640</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>图像 </string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="PA_RGB">
+     <widget class="QPushButton" name="PB_Tip">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>70</y>
+        <width>331</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>此页面是绘制RGB图像页面
+点击后退出程序</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>70</y>
+        <width>531</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PB_addFeature">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>280</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Person&amp;&amp;Iris</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PB_addPerson">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>280</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Person</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PB_loadFeature">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>280</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load Person&amp;&amp;Iris</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Screen">
+     <widget class="QLabel" name="LB_Tip1">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>491</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>此页面是屏幕保护页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Manage">
+     <widget class="QLabel" name="LB_Tip2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>90</y>
+        <width>311</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>此页面是管理页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Login">
+     <widget class="QLabel" name="LB_Tip4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>110</y>
+        <width>321</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>这是密码用户登陆界面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Users">
+     <widget class="QLabel" name="LB_Tip3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>391</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>此页面是用户页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Users_Search">
+     <widget class="QLabel" name="LB_Tip6">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>120</y>
+        <width>381</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户搜索页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Users_Add">
+     <widget class="QLabel" name="LB_Tip7">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>341</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户新加页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Users_AddMore">
+     <widget class="QLabel" name="LB_Tip8">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>130</y>
+        <width>381</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户新加-----添加更多页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Users_Info">
+     <widget class="QLabel" name="LB_Tip9">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>120</y>
+        <width>461</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>用户详情页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_Settings">
+     <widget class="QLabel" name="LB_Tip5">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>391</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>此页面是设置页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_Set">
+     <widget class="QLabel" name="LB_Tip10">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>140</y>
+        <width>371</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>基本设置页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_ModifyTime">
+     <widget class="QLabel" name="LB_Tip11">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>190</y>
+        <width>351</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>修改时间日期界面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_SysInfo">
+     <widget class="QLabel" name="LB_Tip12">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>180</y>
+        <width>341</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>系统信息</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_SysCap">
+     <widget class="QLabel" name="LB_Tip13">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>210</y>
+        <width>301</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>系统容量</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_SysDevice">
+     <widget class="QLabel" name="LB_Tip14">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>210</y>
+        <width>331</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设备信息 </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_IO">
+     <widget class="QLabel" name="LB_Tip15">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>200</y>
+        <width>381</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>I/O接口设置页面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_Verify">
+     <widget class="QLabel" name="LB_Tip16">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>240</y>
+        <width>261</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>验证识别设置界面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_Net">
+     <widget class="QLabel" name="LB_Tip17">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>140</y>
+        <width>231</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>通信网络设置界面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_DataManage">
+     <widget class="QLabel" name="LB_Tip18">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>331</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>数据管理界面</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PA_S_Init">
+     <widget class="QLabel" name="LB_Tip19">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>320</y>
+        <width>331</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>初始化界面</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

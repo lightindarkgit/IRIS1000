@@ -1,0 +1,7 @@
+AI1000项目部署到设备上的说明
+
+1 算法等动态库放到/lib目录下
+2 虚拟键盘参考《Qt5.6虚拟键盘移植说明》word文档
+3 qt没有sqlite的动态库，在应用程序同级目录下建立sqldrivers目录，将libqsqlite.so放到里面
+4 修改/etc/profile ，在末尾增加  ulimit -c unlimited，确保程序崩溃时可以生成core文件
+5 参考 06Other\6q休眠说明 进行设置

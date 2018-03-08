@@ -1,0 +1,62 @@
+main.qml              启动的qml程序,管理其他页面的qml程序
+
+IKIdentEnroll.qml     启动后的识别界面及管理员识别界面,  注册界面
+
+IKDeviceInfo.qml      设备信息界面
+
+IKIOSetting.qml       接口设置界面
+IKNormalSet.qml       基本设置界面
+IKCommuncation.qml    通信设置界面
+IKDataManage.qml      数据管理界面
+IKUsersSet.qml        用户设置界面
+IKInitialization.qml  初始化设置界面
+
+
+IKManage.qml          管理主页界面
+IKSettings.qml        设置界面
+
+
+IKUsersList.qml       用户列表界面
+
+
+IKAddUser.qml         添加新用户
+IKEditUser.qml        编辑用户界面
+
+IKEditMore.qml        填写更多页面
+
+
+IKInputKeyBoard.qml   键盘输入主页面  !!!!
+
+
+IKSearchResult.qml    搜索结果主页面
+IKDelete.qml          删除用户界面
+
+
+IKScreenSaver.qml     屏保界面
+
+
+IKDate.qml            日期选择控件
+IKTime.qml            时间选择控件
+IKSysCap.qml          系统容量控件
+IKSex.qml             性别选择控件
+IKVolume.qml          音量选择控件
+IKIdentMode.qml       验证模式选择控件
+IKTopBar.qml          设置相关界面公共控件
+IKWiegand.qml         韦根设置控件
+
+
+
+其他:
+弹窗界面等
+IKMessage*****
+
+
+
+
+
+
+
+
+
+
+

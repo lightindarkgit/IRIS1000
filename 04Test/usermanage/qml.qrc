@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>image/add.png</file>
+        <file>image/add-disabled.png</file>
+        <file>image/add-hover.png</file>
+        <file>image/delete-disabled.png</file>
+        <file>image/home.png</file>
+        <file>image/home-disabled.png</file>
+        <file>image/home-hover.png</file>
+        <file>image/delete-hover.png</file>
+        <file>image/delete.png</file>
+        <file>image/back.png</file>
+        <file>image/back-disabled.png</file>
+        <file>image/back-hover.png</file>
+        <file>image/edit.png</file>
+        <file>image/edit-disabled.png</file>
+        <file>image/edit-hover.png</file>
+        <file>image/check.png</file>
+        <file>image/user-add.png</file>
+        <file>image/user-add-hover.png</file>
+        <file>image/right.png</file>
+        <file>image/right-hover.png</file>
+        <file>image/noiris.png</file>
+        <file>Userdetails.qml</file>
+        <file>IKAddUser.qml</file>
+        <file>IKDelete.qml</file>
+        <file>IKEditUser.qml</file>
+        <file>IKUsersList.qml</file>
+    </qresource>
+</RCC>

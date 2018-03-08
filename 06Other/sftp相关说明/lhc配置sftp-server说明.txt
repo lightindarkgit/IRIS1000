@@ -1,0 +1,44 @@
+一、部署openssh
+
+为了使用QtCreator的远程部署,需要在嵌入式板卡上面安装sftp-server
+
+可参看 《文档说明.txt》, 由于不需要加密,因此文档中的ssh-keygen不需要运行。那么也只需要将libopenssh.tar.bz2的内容解压缩到板卡上的对应目录下即可
+
+部署后,可在QtCreator上面点击 工具->选项->Device(设备), 添加设备，按照实际填写板卡的ip，port，用户名和用户密码（没有密码可为空）。
+
+在 工具->选项->构建与运行 中的kit下面选择刚刚添加的设备。
+
+在项目的pro文件最后加上
+
+target.path = /home/root
+INSTALLS += target
+
+其中/home/root是嵌入式板卡上面的程序放置路径。
+
+
+二、部署gdbserver
+
+如果板子上没有进行gdbserver的移植，需要进行移植，要保证交叉编译的gdb和gdbserver是一个版本。
+
+注： 6Q板子上面有gdbserver.
+
+为了使用QtCreator的远程调试,需要做两步
+
+1 在板子上运行  gdbserver  IP:port app
+
+其中IP是开发机的ip，
+
+port是为了调试用，请勿用其他程序占用的端口
+
+app是要调试的程序名
+
+2 在QtCreator上点击  调试->开始调试->attach to Running Debug server.（如果没有这项就是attached to remote debug server）
+
+添加板卡的IP，和上面gdbserver使用的port。
+
+填写“本地执行档”(或Local executable) ,选择编译出来的可执行程序即可。
+
+
+然后就可以单步调试程序，查看变量结果。
+
+

@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>qml/IKCommuncation.qml</file>
+        <file>qml/IKDataManage.qml</file>
+        <file>qml/IKDate.qml</file>
+        <file>qml/IKDeviceInfo.qml</file>
+        <file>qml/IKIdentEnroll.qml</file>
+        <file>qml/IKIdentMode.qml</file>
+        <file>qml/IKInitialization.qml</file>
+        <file>qml/IKIOSetting.qml</file>
+        <file>qml/IKManage.qml</file>
+        <file>qml/IKNormalSet.qml</file>
+        <file>qml/IKSettings.qml</file>
+        <file>qml/IKSysCap.qml</file>
+        <file>qml/IKTime.qml</file>
+        <file>qml/IKTopBar.qml</file>
+        <file>qml/IKUsersSet.qml</file>
+        <file>qml/IKVolume.qml</file>
+        <file>qml/IKWiegand.qml</file>
+        <file>qml/jbQuick/QChart.js</file>
+        <file>qml/jbQuick/QChart.qml</file>
+        <file>qml/jbQuick/qmldir</file>
+        <file>qml/IKEditUser.qml</file>
+        <file>qml/IKUsersList.qml</file>
+        <file>qml/IKAddUser.qml</file>
+        <file>qml/IKDelete.qml</file>
+        <file>qml/IKMessageIdentResult.qml</file>
+        <file>qml/IKEditMore.qml</file>
+        <file>qml/IKMessageAddResult.qml</file>
+        <file>qml/IKSex.qml</file>
+        <file>qml/IKIrisMode.qml</file>
+        <file>qml/IKSwite.qml</file>
+	<file>qml/IKUniversalPopWin.qml</file>
+    </qresource>
+</RCC>
